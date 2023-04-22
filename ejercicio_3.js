@@ -101,3 +101,10 @@ const cars = [
   { brand: "Chevrolet", price: 4726, model: 1974 },
   { brand: "Ferrari", price: 9541, model: 1970 },
 ];
+
+const bmwSum = cars
+  .filter((car) => car.brand === "BMW")
+  .map((car) => car.price)
+  .reduce((acc, prev) => acc + prev, 0);
+
+console.log(` Todos los BMW juntos cuestan $${bmwSum}`);
