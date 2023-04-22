@@ -106,13 +106,21 @@ const cars = [
 ];
 
 // Create a function ferraris that returns all the cars of the Ferrari brand.
-const ferraris = cars.filter((element) => element.brand === "Ferrari");
-console.log(ferraris, ferraris.length);
+function ferraris(cars) {
+  return cars.filter((element) => element.brand === "Ferrari");
+}
+console.log(ferraris(cars));
+
 // Create a function nineties that returns all the cars with models between 1980 and 1990.
-const nineties = cars.filter((car) => car.model > 1980 && car.model < 1990);
-console.log(nineties, nineties.length);
+function nineties(cars) {
+  return cars.filter((car) => car.model > 1980 && car.model < 1990);
+}
+console.log(nineties(cars));
+
 // Create a function list that returns an array of strings with the same number of cars. Each element should contain the string “This from costs $” (e.g. for the first element it should say “This Mazda from 1989 costs $5241”).
-const list = cars.map(
-  (car) => `This ${car.brand}  from ${car.model} costs $${car.price}`
-);
-console.log(list);
+function list(cars) {
+  return cars.map(
+    (car) => `This ${car.brand} from ${car.model} costs $${car.price}`
+  );
+}
+console.log(list(cars));
